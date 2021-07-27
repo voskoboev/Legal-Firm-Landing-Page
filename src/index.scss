@@ -1,0 +1,19 @@
+@import '../node_modules/reset.css/reset.css';
+
+@import './ancillary/scss/_fonts';
+@import './ancillary/scss/_vars';
+@import './ancillary/scss/_mixins';
+@import './ancillary/scss/_global';
+
+@import './common.blocks/header/_header';
+@import './common.blocks/hero/_hero';
+@import './common.blocks/services/_services';
+@import './common.blocks/clients/_clients';
+@import './common.blocks/contacts/_contacts';
+@import './common.blocks/connect/_connect';
+@import './common.blocks/footer/_footer';
+
+
+// body {
+//   background-color: green;
+// }
