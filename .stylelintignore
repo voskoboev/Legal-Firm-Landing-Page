@@ -1,0 +1,4 @@
+/node_modules
+/src/js/bundle.min.js
+/src/scss/ancillary/_fonts.scss
+/src/scss/ancillary/_vars.scss

@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "number-leading-zero": null,
+    "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignoreAtRules": [
+          "extend",
+          "include",
+          "import",
+          "media"
+        ]
+      }
+    ],
+    "no-duplicate-selectors": null
+  }
+}
