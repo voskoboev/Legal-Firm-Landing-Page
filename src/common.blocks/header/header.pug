@@ -1,20 +1,23 @@
 header.header
   .container.header__container
     .header__logo
-      img.header__logo-img(src="./images/logo.png " alt="logo")
+      a.header__logo-link(href="#") 
+        img.header__logo-img(src="./images/logo.png " alt="logo-lionic")
     nav.header__nav 
+      .header__menu-mobile
+        span.header__menu-mobile-line
       ul.header__menu 
         li.header__menu-item 
-          a.header__menu-link Home
+          a.header__menu-link(tabindex="0") Home
         li.header__menu-item.header__menu-item--dropdown
-          a.header__menu-link Products 555
+          a.header__menu-link(tabindex="0") Products
         li.header__menu-item
-          a.header__menu-link Our Services
+          a.header__menu-link(tabindex="0") Our Services
         li.header__menu-item
-          a.header__menu-link Pricing
+          a.header__menu-link(tabindex="0") Pricing
         li.header__menu-item
-          a.header__menu-link About Us
+          a.header__menu-link(tabindex="0") About Us
         li.header__menu-item
-          a.header__menu-link Contact Us
+          a.header__menu-link(tabindex="0") Contact Us
     +button('header__btn', 'Free Trial')
 

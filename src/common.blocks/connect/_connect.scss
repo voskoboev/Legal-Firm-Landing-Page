@@ -1,0 +1,45 @@
+.connect {
+  border-bottom: 1px solid #dadada;
+}
+
+.connect__container {
+  padding-top: 120px;
+  padding-bottom: 115px;
+}
+
+.connect__title {
+  text-align: center;
+  color: #1c1c1c;
+  font-weight: 300;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.connect__text {
+  color: #787878;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.connect__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.connect__input:not(:last-child) {
+  width: 250px;
+  height: 60px;
+  color: #787878;
+  border-radius: 30px;
+  border: 1px solid #dadada;
+  padding: 22px;
+  
+}
+
+.connect__input--submit {
+  width: 250px;
+  height: 60px;
+  border-radius: 30px;
+}

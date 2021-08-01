@@ -1,0 +1,43 @@
+.card-testimonial {
+  padding: 55px 55px 30px 40px;
+}
+
+.card-testimonial__text {
+  min-height: 180px;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.3);
+  line-height: 170%;
+  color: #787878;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.card-testimonial__wrapper {
+  display: flex;
+  padding-top: 25px;
+}
+
+.card-testimonial__img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid $accent-color;
+  margin-right: 18px;
+}
+
+.card-testimonial__descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-testimonial__name {
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+.card-testimonial__role {
+  font-size: 14px;
+  color: #787878;
+}

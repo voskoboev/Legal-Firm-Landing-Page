@@ -1,4 +1,35 @@
+.services {
+  border-bottom: 1px solid #DADADA;
+}
+
 .services__container {
   padding-top: 225px;
   padding-bottom: 200px;
 }
+
+.services__title {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1C1C1C;
+  text-transform: capitalize;
+}
+
+.services__text {
+  text-align: center;
+  margin-bottom: 55px;
+  color: #787878;
+}
+
+.services__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__list-item {
+  max-width: 270px;
+}
+
+

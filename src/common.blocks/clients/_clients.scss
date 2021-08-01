@@ -1,0 +1,35 @@
+.clients {
+  border-bottom: 1px solid #DADADA;
+}
+
+.clients__container {
+  padding-top: 100px;
+  padding-bottom: 160px;
+}
+
+.clients__title {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #1c1c1c;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__list-item {
+  max-width: 370px;
+  border: 1px solid rgba(107, 107, 107, 0.3);
+  border-radius: 5px;
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(105%);
+    transition: transform 0.2s ease;
+  }
+}

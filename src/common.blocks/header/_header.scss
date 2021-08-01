@@ -1,5 +1,3 @@
-@import "../../UI.blocks/button/_button";
-
 .header {
   border-bottom: 2px solid #e4e4e4;
   z-index: 10;
@@ -10,10 +8,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  @include screen-xl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 .header__logo {
   margin-right: 90px;
+
+  @include screen-xl {
+    margin-right: 0;
+  }
 }
 
 .header__logo-img {
@@ -27,40 +35,95 @@
   align-items: center;
 }
 
+.header__menu-mobile {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+
+  @include screen-xl {
+    display: block;
+  }
+
+  &-line {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: $accent-color;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: $accent-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: $accent-color;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
 .header__menu {
   display: flex;
   height: 100%;
+
+  @include screen-xl {
+    display: none;
+  }
 }
 
 .header__menu-item {
   display: block;
   cursor: pointer;
-
   border-bottom: 5px solid transparent;
-
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .header__menu-item:hover {
   border-bottom: 5px solid $accent-color;
   color: $accent-color;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .header__menu-item--dropdown {
   position: relative;
 }
 
-.header__menu-item--dropdown::after {
-  content: url("./images/arrow-down.png");
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
+.header__menu-item--dropdown {
+  width: 85px;
+
+  &::after {
+    content: url('./images/arrow-down-black.svg');
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after {
+    content: url('./images/arrow-down-accent.svg');
+    transition: all 0.2s ease;
+  }
 }
 
 .header__menu-link {
-  display: flex;  
+  display: flex;
   align-items: center;
   height: 100%;
   font-size: 15px;
@@ -69,4 +132,9 @@
 
 .header__menu-item:not(:last-child) {
   margin-right: 60px;
+}
+
+.header__btn {
+  position: relative;
+  bottom: 5px;
 }

@@ -5,6 +5,10 @@
 @import './ancillary/scss/_mixins';
 @import './ancillary/scss/_global';
 
+@import './UI.blocks/button/_button';
+@import './UI.blocks/card-img/_card-img';
+@import './UI.blocks/card-testimonial/_card-testimonial';
+
 @import './common.blocks/header/_header';
 @import './common.blocks/hero/_hero';
 @import './common.blocks/services/_services';

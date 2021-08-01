@@ -1,8 +1,29 @@
 section.services 
   .container.services__container
     .services__upper
-      h2.services__title What We Do
+      h2.services__title(tabindex="0") What We Do
       p.services__text. 
         Lionic guides you on making decisions for all aspects 
         of your end-of-life plans.
     .services__lower
+      ul.services__list 
+        li.services__list-item
+          a.services__list-link(href="#")
+            +card-img('Your Legacy', picInfinity) 
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              | sed diam nonummy
+        li.services__list-item
+          a.services__list-link(href="#")
+            +card-img('Your Health', picHeart) 
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              | sed diam nonummy
+        li.services__list-item
+          a.services__list-link(href="#")
+            +card-img('Funeral & Memorial', picCards) 
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+              | sed diam nonummy
+        li.services__list-item
+          a.services__list-link(href="#")
+            +card-img('Legal & Financial', picHammer) 
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              | sed diam nonummy

@@ -2,10 +2,27 @@
   background: url("./images/office-organized.jpg") no-repeat;
   background-size: cover;
   min-height: 550px;
+
+  @include screen-xl {
+    background-position: 50% 0;
+  }
+
+  @include screen-lg {
+    min-height: 500px;
+  }
 }
 
 .hero__container {
   padding-top: 125px;
+
+  @include screen-xl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include screen-lg {
+    padding-top: 60px;
+  }
 }
 
 .hero__title {
