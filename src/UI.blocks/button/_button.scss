@@ -1,18 +1,17 @@
 .btn {
+  padding: 15px 35px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
   background-color: $accent-color;
   border: none;
-  padding: 15px 35px;
-  text-transform: uppercase;
-  color: #fff;
   border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  font-family: inherit;
-
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover {
   background-color: lighten($accent-color, 5%);
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }

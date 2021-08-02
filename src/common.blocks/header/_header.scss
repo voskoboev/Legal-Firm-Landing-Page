@@ -1,18 +1,26 @@
 .header {
-  border-bottom: 2px solid #e4e4e4;
-  z-index: 10;
+  border-bottom: 2px solid $border-color;
 }
 
 .header__container {
-  height: 110px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
 
   @include screen-xl {
     padding-right: 40px;
     padding-left: 40px;
+  }
+
+  @include screen-md {
+    height: 80px;
+  }
+
+  @include screen-sm {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -30,16 +38,16 @@
 }
 
 .header__nav {
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .header__menu-mobile {
+  position: relative;
   display: none;
   width: 40px;
   height: 30px;
-  position: relative;
   cursor: pointer;
 
   @include screen-xl {
@@ -47,34 +55,34 @@
   }
 
   &-line {
-    display: block;
-    height: 5px;
-    width: 100%;
-    background-color: $accent-color;
     position: absolute;
     top: 50%;
     left: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $accent-color;
     transform: translateY(-50%);
   }
 
   &::before {
-    content: '';
-    height: 5px;
-    width: 100%;
-    background-color: $accent-color;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 5px;
+    content: '';
+    background-color: $accent-color;
   }
 
   &::after {
-    content: '';
-    height: 5px;
-    width: 100%;
-    background-color: $accent-color;
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    content: '';
+    background-color: $accent-color;
   }
 }
 
@@ -95,8 +103,8 @@
 }
 
 .header__menu-item:hover {
-  border-bottom: 5px solid $accent-color;
   color: $accent-color;
+  border-bottom: 5px solid $accent-color;
   transition: all 0.2s ease;
 }
 
@@ -108,12 +116,12 @@
   width: 85px;
 
   &::after {
-    content: url('./images/arrow-down-black.svg');
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    content: url('./images/arrow-down-black.svg');
     transition: all 0.2s ease;
+    transform: translateY(-50%);
   }
 
   &:hover::after {
@@ -137,4 +145,8 @@
 .header__btn {
   position: relative;
   bottom: 5px;
+
+  @include screen-sm {
+    display: none;
+  }
 }

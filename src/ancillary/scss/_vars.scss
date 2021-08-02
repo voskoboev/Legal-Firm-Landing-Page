@@ -1,3 +1,11 @@
 $accent-color: #3172b9;
-
 $dark-color: #1c1c1c;
+
+$border-color: #dadada;
+$text-color: #787878;
+
+%first-letter-uppercase {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

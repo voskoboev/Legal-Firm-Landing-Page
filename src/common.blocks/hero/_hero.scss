@@ -1,7 +1,7 @@
 .hero {
-  background: url("./images/office-organized.jpg") no-repeat;
-  background-size: cover;
   min-height: 550px;
+  background: url('./images/office-organized.jpg') no-repeat;
+  background-size: cover;
 
   @include screen-xl {
     background-position: 50% 0;
@@ -20,32 +20,57 @@
     padding-left: 40px;
   }
 
-  @include screen-lg {
-    padding-top: 60px;
+  @include screen-sm {
+    padding-top: 80px;
+  }
+
+  @include screen-sm {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include screen-xs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .hero__title {
-  color: #1c1c1c;
-  font-size: 40px;
-  font-weight: 300;
+  @extend %first-letter-uppercase;
+
   max-width: 510px;
   margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 300;
   line-height: 120%;
+  color: $dark-color;
+
+  @include screen-xs {
+    text-align: center;
+  }
 }
 
 .hero__text {
-  margin-bottom: 30px;
+  @extend %first-letter-uppercase;
+
   max-width: 470px;
+  margin-bottom: 30px;
   line-height: 140%;
-  color: #787878;
+  color: $text-color;
+
+  @include screen-xs {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 .btn__wrapper {
- width: 250px;
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
 }
 
 .hero__btn {
@@ -53,19 +78,19 @@
 }
 
 .hero__hint {
-  margin-top: 20px;
   position: relative;
-  text-transform: uppercase;
-  color: #787878;
-  font-size: 9px;
+  margin-top: 20px;
   margin-left: 22px;
+  font-size: 9px;
+  color: $text-color;
+  text-transform: uppercase;
 }
 
 .hero__hint::before {
-  content: url("./images/shield.png");
-  width: 15px;
-  height: 18px;
   position: absolute;
   top: -5px;
   left: -22px;
+  width: 15px;
+  height: 18px;
+  content: url('./images/shield.png');
 }

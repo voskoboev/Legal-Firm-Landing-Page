@@ -1,14 +1,24 @@
 .card-testimonial {
   padding: 55px 55px 30px 40px;
+
+  @include screen-xs {
+    padding: 35px;
+  }
 }
 
 .card-testimonial__text {
+  @extend %first-letter-uppercase;
+
   min-height: 180px;
-  border-bottom: 1px solid rgba(107, 107, 107, 0.3);
-  line-height: 170%;
-  color: #787878;
-  font-size: 14px;
   padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 150%;
+  color: $text-color;
+  border-bottom: 1px solid $border-color;
+
+  @include screen-xs {
+    font-size: 14px;
+  }
 }
 
 .card-testimonial__wrapper {
@@ -19,9 +29,9 @@
 .card-testimonial__img {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  border: 2px solid $accent-color;
   margin-right: 18px;
+  border: 2px solid $accent-color;
+  border-radius: 50%;
 }
 
 .card-testimonial__descr {
@@ -33,11 +43,11 @@
 .card-testimonial__name {
   margin-bottom: 10px;
   font-size: 17px;
-  color: #1c1c1c;
   font-weight: 600;
+  color: $dark-color;
 }
 
 .card-testimonial__role {
   font-size: 14px;
-  color: #787878;
+  color: $text-color;
 }

@@ -1,41 +1,83 @@
 .connect {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid $border-color;
 }
 
 .connect__container {
   padding-top: 120px;
   padding-bottom: 115px;
+
+  @include screen-xl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include screen-lg {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include screen-sm {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include screen-xs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .connect__title {
-  text-align: center;
-  color: #1c1c1c;
-  font-weight: 300;
-  font-size: 36px;
   margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 300;
+  color: $dark-color;
+  text-align: center;
   text-transform: capitalize;
+
+  @include screen-xs {
+    font-size: 30px;
+  }
 }
 
 .connect__text {
-  color: #787878;
-  text-align: center;
+  @extend %first-letter-uppercase;
+
   margin-bottom: 60px;
+  line-height: 140%;
+  color: $text-color;
+  text-align: center;
+
+  @include screen-xs {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
 }
 
 .connect__form {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+
+  @include screen-xl {
+    justify-content: space-evenly;
+  }
+}
+
+.connect__input {
+  @include screen-xl {
+    margin: 20px;
+  }
 }
 
 .connect__input:not(:last-child) {
   width: 250px;
   height: 60px;
-  color: #787878;
-  border-radius: 30px;
-  border: 1px solid #dadada;
   padding: 22px;
-  
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: 30px;
 }
 
 .connect__input--submit {

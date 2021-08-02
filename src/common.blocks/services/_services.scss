@@ -1,35 +1,95 @@
 .services {
-  border-bottom: 1px solid #DADADA;
+  border-bottom: 1px solid #dadada;
 }
 
 .services__container {
   padding-top: 225px;
   padding-bottom: 200px;
+
+  @include screen-xl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include screen-lg {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include screen-sm {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include screen-xs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .services__title {
-  text-align: center;
   margin-bottom: 35px;
   font-size: 36px;
   font-weight: 300;
-  color: #1C1C1C;
+  color: $dark-color;
+  text-align: center;
   text-transform: capitalize;
+
+  @include screen-lg {
+    margin-bottom: 20px;
+  }
+
+  @include screen-xs {
+    font-size: 30px;
+  }
 }
 
 .services__text {
-  text-align: center;
+  @extend %first-letter-uppercase;
+
   margin-bottom: 55px;
-  color: #787878;
+  color: $text-color;
+  text-align: center;
+
+  @include screen-xl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include screen-lg {
+    margin-bottom: 30px;
+  }
+
+  @include screen-sm {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include screen-xs {
+    font-size: 14px;
+  }
 }
 
 .services__list {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+
+  @include screen-xl {
+    justify-content: space-evenly;
+  }
 }
 
 .services__list-item {
   max-width: 270px;
+
+  @include screen-xl {
+    margin: 20px;
+  }
+
+  @include screen-sm {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
-
-
