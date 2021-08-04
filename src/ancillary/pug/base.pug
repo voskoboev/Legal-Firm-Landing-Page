@@ -1,5 +1,4 @@
 include ./vars
-
 include ../../UI.blocks/card-img/card-img
 include ../../UI.blocks/card-testimonial/card-testimonial
 include ../../UI.blocks/button/button
@@ -12,10 +11,11 @@ html(lang=lang)
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="description" content="Lionic: Legal Solutions")
     meta(name="keywords" content="legal, services, lawyers, contract, document, online, legacy, health, funeral, financial")
-    link(rel="stylesheet" href="./bundle.min.css")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com", crossorigin)
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap")
+    link(rel="stylesheet" href="./css/bundle.min.css")
+    script(src="./js/bundle.min.js" defer) 
     title=title
   body 
     block content

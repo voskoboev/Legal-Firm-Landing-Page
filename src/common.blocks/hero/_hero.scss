@@ -1,6 +1,6 @@
 .hero {
   min-height: 550px;
-  background: url('./images/office-organized.jpg') no-repeat;
+  background: url('../images/office-organized.jpg') no-repeat;
   background-size: cover;
 
   @include screen-xl {
@@ -92,5 +92,5 @@
   left: -22px;
   width: 15px;
   height: 18px;
-  content: url('./images/shield.png');
+  content: url('../images/shield.png');
 }

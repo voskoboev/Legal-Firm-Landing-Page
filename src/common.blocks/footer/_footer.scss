@@ -35,10 +35,6 @@
   @include screen-lg {
     order: 0;
   }
-
-  // @include screen-sm {
-
-  // }
 }
 
 .footer_copyright {
@@ -77,7 +73,7 @@
 
 .footer__menu-link {
   font-size: 14px;
-  color: #787878;
+  color: $text-color;
   text-transform: capitalize;
   transition: color 0.2s ease;
 }

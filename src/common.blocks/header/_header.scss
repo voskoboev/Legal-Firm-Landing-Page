@@ -43,7 +43,7 @@
   height: 100%;
 }
 
-.header__menu-mobile {
+.header__btn--menu-mobile {
   position: relative;
   display: none;
   width: 40px;
@@ -54,7 +54,7 @@
     display: block;
   }
 
-  &-line {
+  .header__btn-line {
     position: absolute;
     top: 50%;
     left: 0;
@@ -91,8 +91,25 @@
   height: 100%;
 
   @include screen-xl {
-    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 40px;
+    background-color: #fff;
+    border-right: 1px solid $accent-color;
+    transition: transform 0.2s ease;
+    transform: translateX(-150%);
   }
+}
+
+.header__menu--active {
+  transition: transform 0.2s ease;
+  transform: translateX(0);
 }
 
 .header__menu-item {
@@ -100,12 +117,28 @@
   cursor: pointer;
   border-bottom: 5px solid transparent;
   transition: all 0.2s ease;
+
+  @include screen-xl {
+    border-bottom: none;
+  }
 }
 
 .header__menu-item:hover {
-  color: $accent-color;
   border-bottom: 5px solid $accent-color;
   transition: all 0.2s ease;
+
+  @include screen-xl {
+    border-bottom: none;
+  }
+}
+
+.header__menu-item:not(:last-child) {
+  margin-right: 60px;
+
+  @include screen-xl {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .header__menu-item--dropdown {
@@ -119,13 +152,13 @@
     position: absolute;
     top: 50%;
     right: 0;
-    content: url('./images/arrow-down-black.svg');
+    content: url('../images/arrow-down-black.svg');
     transition: all 0.2s ease;
     transform: translateY(-50%);
   }
 
   &:hover::after {
-    content: url('./images/arrow-down-accent.svg');
+    content: url('../images/arrow-down-accent.svg');
     transition: all 0.2s ease;
   }
 }
@@ -136,13 +169,18 @@
   height: 100%;
   font-size: 15px;
   font-weight: 600;
+  color: $dark-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  @include screen-xl {
+    font-size: 16px;
+  }
 }
 
-.header__menu-item:not(:last-child) {
-  margin-right: 60px;
-}
-
-.header__btn {
+.header__btn--trial {
   position: relative;
   bottom: 5px;
 

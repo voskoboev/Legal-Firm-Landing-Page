@@ -2,6 +2,7 @@ const { src, dest, parallel, series, watch } = require('gulp')
 const browserSync = require('browser-sync').create()
 const pug = require('gulp-pug')
 const concat = require('gulp-concat')
+const babel = require('gulp-babel')
 const uglify = require('gulp-uglify-es').default
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
@@ -26,7 +27,7 @@ const html = () => {
       pretty: true
     }))
     .pipe(dest('src/'))
-  // .pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 }
 
 const styles = () => {
@@ -47,17 +48,20 @@ const styles = () => {
         level: { 1: { specialComments: 0 } }
       })
     )
-    .pipe(dest('src/'))
+    .pipe(dest('src/css/'))
     .pipe(browserSync.stream())
 }
 
 const scripts = () => {
   return src([
-    'src/index.js'
+    'src/js/index.js'
   ])
     .pipe(concat('bundle.min.js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
-    .pipe(dest('src/'))
+    .pipe(dest('src/js/'))
     .pipe(browserSync.stream())
 }
 
@@ -69,12 +73,7 @@ const images = () => {
 }
 
 const cleanimg = () => {
-  return del('src/images/**/*', { force: true }) // dest/
-}
-
-const fonts = () => {
-  return src('src/fonts/**/*')
-    .pipe(dest('src/fonts/'))
+  return del('src/images/**/*', { force: true })
 }
 
 const cleandist = () => {
@@ -87,7 +86,6 @@ const buildcopy = () => {
       'src/css/**/*.min.css',
       'src/js/**/*.min.js',
       'src/images/**/*',
-      'src/fonts/**/*',
       'src/**/*.html'
     ],
     { base: 'src/' }
@@ -100,7 +98,6 @@ const startWatch = () => {
   watch('src/**/*.scss', styles)
   watch(['src/**/*.js', '!src/**/*.min.js'], scripts)
   watch('src/images/**/*', images)
-  watch('src/fonts/**/*', fonts)
 }
 
 exports.browsersync = browsersync
@@ -108,7 +105,6 @@ exports.html = html
 exports.scripts = scripts
 exports.styles = styles
 exports.images = images
-exports.fonts = fonts
 exports.cleanimg = cleanimg
 exports.cleandist = cleandist
 
@@ -117,7 +113,6 @@ exports.build = series(
   styles,
   scripts,
   images,
-  fonts,
   buildcopy
 )
 

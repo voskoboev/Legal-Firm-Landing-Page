@@ -2,9 +2,19 @@ html {
   box-sizing: border-box;
 }
 
-body {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
+}
+
+body {
   font-family: OpenSans, AdobeInvisFont, MyriadPro-Regular, sans-serif;
+}
+
+.body--inactive {
+  height: 100px;
+  overflow: hidden;
 }
 
 .container {
