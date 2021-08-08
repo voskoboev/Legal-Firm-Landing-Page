@@ -76,11 +76,11 @@
   color: $text-color;
   text-transform: capitalize;
   transition: color 0.2s ease;
-}
 
-.footer__menu-link:hover {
-  color: $accent-color;
-  transition: color 0.2s ease;
+  &:hover {
+    color: $accent-color;
+    transition: color 0.2s ease;
+  }
 }
 
 .footer__socials {

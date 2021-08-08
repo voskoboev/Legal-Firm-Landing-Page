@@ -1,15 +1,15 @@
-const { src, dest, parallel, series, watch } = require('gulp')
-const browserSync = require('browser-sync').create()
-const pug = require('gulp-pug')
-const concat = require('gulp-concat')
-const babel = require('gulp-babel')
-const uglify = require('gulp-uglify-es').default
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer')
-const cleancss = require('gulp-clean-css')
-const imagemin = require('gulp-imagemin')
-const newer = require('gulp-newer')
-const del = require('del')
+const { src, dest, parallel, series, watch } = require('gulp'),
+  browserSync = require('browser-sync').create(),
+  pug = require('gulp-pug'),
+  concat = require('gulp-concat'),
+  babel = require('gulp-babel'),
+  uglify = require('gulp-uglify-es').default,
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  cleancss = require('gulp-clean-css'),
+  imagemin = require('gulp-imagemin'),
+  newer = require('gulp-newer'),
+  del = require('del')
 
 const browsersync = () => {
   browserSync.init({

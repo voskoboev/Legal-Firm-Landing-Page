@@ -1,3 +1,5 @@
+- const headerTitlesArr = ['Home', 'Products', 'Our Services', 'Pricing', 'About Us', 'Contact Us']
+
 header.header
   .container.header__container
     .header__logo
@@ -7,17 +9,10 @@ header.header
       .header__btn--menu-mobile
         span.header__btn-line
       ul.header__menu 
-        li.header__menu-item 
-          a.header__menu-link(href="#" tabindex="0") Home
-        li.header__menu-item.header__menu-item--dropdown
-          a.header__menu-link(href="#" tabindex="0") Products
-        li.header__menu-item
-          a.header__menu-link(href="#" tabindex="0") Our Services
-        li.header__menu-item
-          a.header__menu-link(href="#" tabindex="0") Pricing
-        li.header__menu-item
-          a.header__menu-link(href="#" tabindex="0") About Us
-        li.header__menu-item
-          a.header__menu-link(href="#" tabindex="0") Contact Us
+        each val, index in headerTitlesArr
+          li.header__menu-item 
+            a.header__menu-link(
+              class=(index === 1 ? "header__menu-item--dropdown" : null)  
+              href="#" 
+              tabindex="0")= val
     +button('header__btn--trial', 'Free Trial')
-

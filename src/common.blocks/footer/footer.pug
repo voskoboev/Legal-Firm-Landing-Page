@@ -1,3 +1,6 @@
+- const footerTitlesArr = ['About Us', 'Contact Us', 'Privacy Policy', 'Terms Condition']
+- const picsArr = [picTwitter, picLinkedin, picEmail]
+
 footer.footer 
   .container.footer__container 
     .footer__logo
@@ -6,18 +9,10 @@ footer.footer
     p.footer_copyright Copyright &copy; 2021. All Right Reserved
     nav.footer__nav
       ul.footer__menu
-        li.footer_menu-item
-          a.footer__menu-link(href="#") About Us
-        li.footer_menu-item
-          a.footer__menu-link(href="#") Contact Us
-        li.footer_menu-item
-          a.footer__menu-link(href="#") Privacy Policy
-        li.footer_menu-item
-          a.footer__menu-link(href="#") Terms Condition
-    ul.footer__socials 
-      li.footer__socials-item
-        a.footer__socials-link(href="#" target="_blank" rel="noopener")!= picTwitter
-      li.footer__socials-item
-        a.footer__socials-link(href="#" target="_blank" rel="noopener")!= picLinkedin 
-      li.footer__socials-item
-        a.footer__socials-link(href="#" target="_blank" rel="noopener")!= picEmail 
+        each val in footerTitlesArr 
+          li.footer_menu-item
+            a.footer__menu-link(href="#")= val
+    ul.footer__socials
+      each val in picsArr 
+        li.footer__socials-item
+          a.footer__socials-link(href="#" target="_blank" rel="noopener")!= val
